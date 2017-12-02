@@ -1,56 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-
-  <Identity
-    Name="96cf4249-611f-4cac-8d4c-cc7a90c6f1e2"
-    Version="1.0.0.0"
-    Publisher="CN=cochu" />
-
-  <mp:PhoneIdentity PhoneProductId="96cf4249-611f-4cac-8d4c-cc7a90c6f1e2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp uap3">
+  <Identity Name="31170.1HD" Version="1.1.2.0" Publisher="CN=E700FA68-A7C6-4140-8B94-9B97866AB732" />
+  <mp:PhoneIdentity PhoneProductId="68b18c41-dfcf-4415-a32e-8e6c4d2755f9" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>1 HD</DisplayName>
-    <PublisherDisplayName>cochu</PublisherDisplayName>
+    <PublisherDisplayName>Вова Дальний</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application 
-      Id="App"
-      StartPage="https://example.com">
-
-      <uap:ApplicationContentUriRules>
-        <uap:Rule Type="include" WindowsRuntimeAccess="all" Match="https://example.com" />
-      </uap:ApplicationContentUriRules>
-
-      <uap:VisualElements
-        DisplayName="1 HD"
-        Description="1 HD"
-        BackgroundColor="transparent"
-        Square150x150Logo="images\Square150x150Logo.png"
-        Square44x44Logo="images\Square44x44Logo.png">
-
-        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" />
+    <Application Id="App" StartPage="https://yastatic.net/yandex-video-player-iframe-api-bundles/1.0-236/?mq_url=https%3A%2F%2Fstrm.yandex.ru%2Fkal%2F1hd%2F1hd0.m3u8%3Ffrom_block%3Dmedia-footer_stream_item%26reqid">
+      <uap:VisualElements DisplayName="1 HD" Description="1 HD" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:LockScreen Notification="badge" BadgeLogo="images\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square310x310Logo="images\LargeTile.png" Square71x71Logo="images\SmallTile.png">
+        </uap:DefaultTile>
         <uap:SplashScreen Image="images\splashscreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
       </uap:VisualElements>
-
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://yastatic.net/yandex-video-player-iframe-api-bundles/1.0-236/?mq_url=https%3A%2F%2Fstrm.yandex.ru%2Fkal%2F1hd%2F1hd0.m3u8%3Ffrom_block%3Dmedia-footer_stream_item%26reqid" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
-
 </Package>
